@@ -1,0 +1,68 @@
+body{
+    background-color: #232327;
+    color: #ffffff;
+    text-align: center;
+}
+
+header, footer{
+    display: block;
+    padding: 20px;
+    background-color: #202020;
+}
+
+hr{
+    background-color: #202020;
+    height: 5px;
+    border-top: 5px dotted #ffd700;
+}
+
+div{
+    padding: 2%;
+}
+
+img.image{
+    border: 1px transparent;
+    border-radius: 7px;
+    filter: grayscale(100%);
+}
+
+img.image:hover{
+    border: 2px solid blue;
+    /* border-color: blue; */
+    filter: none;
+}
+
+a{
+    text-decoration: none;
+    color: aquamarine;
+    font-size: 13pt;
+}
+
+a:hover{
+    font-weight: bold;
+    color: rgb(179, 147, 137);
+}
+
+a.currentpage{
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4px;
+    margin: auto;
+}
+
+p.pages a{
+    font-size: 16pt;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+p.social a{
+    padding-left: 7px;
+    padding-right: 7px;
+}
