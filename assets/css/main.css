@@ -67,25 +67,55 @@ p.social a{
     padding-right: 7px;
 }
 
-@media only screen and (max-device-width: 650px), (max-width: 650px) {
+@media only screen and (max-device-width: 820px), (max-width: 820px) {
     .main {
-        display: contents;
-        justify-content: center;
+        display: flex;
+        justify-content: space-evenly;
         margin: auto;
         font-size: larger;
     }
+      
+    .main div {
+        flex: 31%;
+        padding: 4px;
+    }
     img {
-        width: 60%;
+        width: 200px;
+    }
+    img.image {
+        filter: none;
     }
 }
 
-@media only screen and (max-device-width: 550px), (max-width: 550px) {
-    img {
-        width: 80%;
+@media only screen and (max-device-width: 620px), (max-width: 620px) {      
+    .main div {
+        flex: 48%;
+        padding: 4px;
     }
 }
 
-@media only screen and (max-device-width: 450px), (max-width: 450px) {
+@media only screen and (max-device-width: 420px), (max-width: 420px) {
+    img {
+        min-width: fit-content;
+        width: 71%;
+    }
+}
+
+@media only screen and (max-device-width: 380px), (max-width: 380px) {
+    img {
+        min-width: fit-content;
+        width: 79%;
+    }
+}
+
+@media only screen and (max-device-width: 320px), (max-width: 320px) {
+    img {
+        min-width: fit-content;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-device-width: 250px), (max-width: 250px) {
     img {
         min-width: fit-content;
         width: 100%;
