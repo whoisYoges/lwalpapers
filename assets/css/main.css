@@ -66,3 +66,29 @@ p.social a{
     padding-left: 7px;
     padding-right: 7px;
 }
+
+@media only screen and (max-device-width: 650px), (max-width: 650px) {
+    .main {
+        display: contents;
+        justify-content: center;
+        margin: auto;
+        font-size: larger;
+    }
+    img {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-device-width: 550px), (max-width: 550px) {
+    img {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-device-width: 450px), (max-width: 450px) {
+    img {
+        min-width: fit-content;
+        width: 100%;
+    }
+}
+
