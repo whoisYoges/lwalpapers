@@ -66,6 +66,20 @@ p.social a{
     padding-right: 7px;
 }
 
+.downloadmain {
+    text-align: left;
+}
+pre {
+    background: #141414;
+    padding: 15px;
+    max-width: 94%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+code {
+    font-size: 0.98rem;
+    color: #ffd700;
+}
 @media only screen and (max-device-width: 820px), (max-width: 820px) {
     .main {
         display: flex;
