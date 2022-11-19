@@ -23,12 +23,11 @@ div{
 img.image{
     border: 1px transparent;
     border-radius: 7px;
-    filter: grayscale(100%);
+    filter: grayscale(100%) drop-shadow(0 0 0.65rem rgb(141, 156, 149));
 }
 
 img.image:hover{
     border: 2px solid blue;
-    /* border-color: blue; */
     filter: none;
 }
 
@@ -93,32 +92,3 @@ p.social a{
         padding: 4px;
     }
 }
-
-@media only screen and (max-device-width: 420px), (max-width: 420px) {
-    img {
-        min-width: fit-content;
-        width: 71%;
-    }
-}
-
-@media only screen and (max-device-width: 380px), (max-width: 380px) {
-    img {
-        min-width: fit-content;
-        width: 79%;
-    }
-}
-
-@media only screen and (max-device-width: 320px), (max-width: 320px) {
-    img {
-        min-width: fit-content;
-        width: 90%;
-    }
-}
-
-@media only screen and (max-device-width: 250px), (max-width: 250px) {
-    img {
-        min-width: fit-content;
-        width: 100%;
-    }
-}
-
