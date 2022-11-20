@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View and download collection of 900+ HD unique desktop wallpapers!">
@@ -28,19 +28,19 @@
     <meta property="og:site_property" content="lwalpapers">
     <meta property="og:description" content="View and download collection of 900+ HD unique desktop wallpapers!">
     <meta property="og:email" content="contact.yogesh@pm.me">
-    <meta property="og:image" content="../assets/images/opengraph.jpg">
+    <meta property="og:image" content="/assets/images/opengraph.jpg">
 
-    <link href="../assets/images/favicon-16.png" rel="icon" type="image/png" sizes="16x16">
-    <link href="../assets/images/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="../assets/images/favicon-48.png" rel="icon" type="image/png" sizes="48x48">
-    <link href="../assets/images/favicon-64.png" rel="icon" type="image/png" sizes="64x64">
-    <link href="../assets/images/favicon-128.png" rel="icon" type="image/png" sizes="128x128">
-    <link href="../assets/images/favicon-256.png" rel="icon" type="image/png" sizes="256x256">
-    <link href="../assets/images/favicon-512.png" rel="icon" type="image/png" sizes="512x512">
-    <link href="../assets/images/favicon-256.png" rel="apple-touch-icon">
-    <link href="../assets/images/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76">
-    <link href="../assets/images/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120">
-    <link href="../assets/images/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="/assets/images/favicon-16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/assets/images/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/assets/images/favicon-48.png" rel="icon" type="image/png" sizes="48x48">
+    <link href="/assets/images/favicon-64.png" rel="icon" type="image/png" sizes="64x64">
+    <link href="/assets/images/favicon-128.png" rel="icon" type="image/png" sizes="128x128">
+    <link href="/assets/images/favicon-256.png" rel="icon" type="image/png" sizes="256x256">
+    <link href="/assets/images/favicon-512.png" rel="icon" type="image/png" sizes="512x512">
+    <link href="/assets/images/favicon-256.png" rel="apple-touch-icon">
+    <link href="/assets/images/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="/assets/images/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="/assets/images/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152">
     <title>Download lwalpapers!</title>
 </head>
 <body>
@@ -49,6 +49,7 @@
         <h3>To download all the wallpapers; Follow the procedure below:</h3>
     </header>
     <hr>
+    <h2><a href="/">Go to main website</a></h2>
     <div class="downloadmain">
     <ul>
         <li>Open the terminal, just copy and run following commands:</li>
@@ -58,8 +59,7 @@
 cd lwalpapers
 for (( w=1; w&lt;=903; w++ ))
 do
-  curl -O --silent "https://raw.githubusercontent.com/whoisYoges/lwalpapers/PicturesOnly/wallpapers/$(printf b-%0.3d.jpg "$w")"
-  echo "Downloaded wallpaper $w."
+  curl -LOS "https://raw.githubusercontent.com/whoisYoges/lwalpapers/PicturesOnly/wallpapers/$(printf b-%0.3d.jpg "$w")"
 done</code></pre>
 </p>
 <p>It will download all 903 wallpapers in lwalpapers directory.</p>
@@ -79,7 +79,6 @@ done</code></pre>
             <a href="/9">9</a>
         </p>
         <p class="social">
-            Follow Me on Social Media:
             <a href="https://fosstodon.org/@whoisYoges" target="_blank" rel="noopener noreferrer">Mastodon</a>
             <a href="https://github.com/whoisYoges" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://twitter.com/whoisYoges" target="_blank" rel="noopener noreferrer">Twitter</a>
