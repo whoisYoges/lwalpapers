@@ -48,6 +48,47 @@ p.pages a {
   padding-left: 7px;
   padding-right: 7px;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+  align-items: center;
+}
+.pagination a, .pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: aquamarine;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+.pagination a:hover {
+  background-color: #404040;
+  border-color: aquamarine;
+  box-shadow: 0 0 10px rgba(127, 255, 212, 0.3);
+  color: #ffffff;
+}
+.pagination a.current {
+  background-color: #ffd700;
+  color: #000000;
+  border-color: #ffd700;
+  font-weight: bold;
+}
+.pagination span {
+  color: #888;
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
 p.social a {
   padding-left: 7px;
   padding-right: 7px;

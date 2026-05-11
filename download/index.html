@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHPG4XSBL3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YHPG4XSBL3');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="no-cache">
@@ -51,41 +60,82 @@
     <hr>
     <h2><a href="/">Go to main website</a></h2>
     <div class="downloadmain">
-    <ul>
-        <li>Open the terminal, just copy and run following commands:</li>
-        <p></code>
-        <pre><code>bash
-mkdir lwalpapers
-cd lwalpapers
-for (( w=1; w&lt;934; w++ ))
-do
-  curl -LOS "https://raw.githubusercontent.com/whoisYoges/lwalpapers/PicturesOnly/wallpapers/$(printf b-%0.3d.jpg "$w")"
-done</code></pre>
-</p>
-<p>It will download all 933 wallpapers in lwalpapers directory.</p>
-    </ul>
-    <h3>Alternative Download: <a href="https://github.com/whoisYoges/lwalpapers/archive/refs/heads/PicturesOnly.zip">Download As Zip Here!</a></h3>
+        <ul>
+            <li>Open the terminal, just copy and run following commands:</li>
+            <div style="background-color: #2a2a2a; padding: 15px; border-radius: 5px; margin: 15px 0; position: relative;">
+                <button onclick="copyToClipboard(this)" style="position: absolute; top: 10px; right: 10px; padding: 8px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Copy</button>
+                <pre id="codeBlock" style="color: #00ff00; font-family: 'Courier New', monospace; white-space: pre-wrap; word-wrap: break-word; margin-top: 30px;"><code>mkdir -p lwalpapers && cd lwalpapers && seq 1 1409 | xargs -I{} sh -c 'curl -L -O -s "https://raw.githubusercontent.com/whoisYoges/lwalpapers/PicturesOnly/wallpapers/$(printf b-%03d.jpg {})"'</code></pre>
+            </div>
+            <p>It will download all 1409 wallpapers in lwalpapers directory.</p>
+            <h3>Alternative Download: <a href="https://github.com/whoisYoges/lwalpapers/archive/refs/heads/PicturesOnly.zip">Download As Zip Here!</a></h3>
+        </ul>
     </div>
     <hr>
+    <script>
+        function copyToClipboard(button) {
+            const codeBlock = document.getElementById('codeBlock');
+            const text = codeBlock.textContent;
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.style.backgroundColor = '#45a049';
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '#4CAF50';
+                    }, 2000);
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const originalText = button.textContent;
+                    button.textContent = 'Copied!';
+                    button.style.backgroundColor = '#45a049';
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.style.backgroundColor = '#4CAF50';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+    </script>
     <footer>
-        <p class="pages">
-            <a href="/">1</a>
-            <a href="/2">2</a>
-            <a href="/3">3</a>
-            <a href="/4">4</a>
-            <a href="/5">5</a>
-            <a href="/6">6</a>
-            <a href="/7">7</a>
-            <a href="/8">8</a>
-            <a href="/9">9</a>
-        </p>
-        <p class="social">
-            <a href="https://fosstodon.org/@whoisYoges" target="_blank" rel="noopener noreferrer">Mastodon</a>
-            <a href="https://github.com/whoisYoges" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://twitter.com/whoisYoges" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <a href="https://www.youtube.com/@castorisdead?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://castorisdead.xyz" target="_blank" rel="noopener noreferrer">Website</a>
-        </p>
-    </footer>
+    <p>
+        <a href="#">Go to top of the page!</a>
+    </p>
+    <p>
+        <a href="/download">Download All Images</a>
+    </p>
+    <p class="pages">
+        <a href="/">1</a>
+        <a href="/2">2</a>
+        <a href="/3">3</a>
+        <a href="/4">4</a>
+        <a href="/5">5</a>
+        <a href="/6">6</a>
+        <a href="/7">7</a>
+        <a href="/8">8</a>
+        <a href="/9">9</a>
+        <a href="/10">10</a>
+        <a href="/11">11</a>
+        <a href="/12">12</a>
+        <a href="/13">13</a>
+        <a href="/14">14</a>
+        <a href="/15">15</a></p>
+    <p class="social">
+        <a href="https://fosstodon.org/@whoisYoges" target="_blank" rel="noopener noreferrer">Mastodon</a>
+        <a href="https://github.com/whoisYoges" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://twitter.com/whoisYoges" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://castorisdead.xyz" target="_blank" rel="noopener noreferrer">Website</a>
+    </p>
+</footer>
 </body>
 </html>
